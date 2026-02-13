@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disciple 2026 | Engagement</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,500&display=swap" rel="stylesheet">
+    <style>
+        :root { --bordeaux: #6d071a; --gold: #c5a059; --bg: #fdfbf7; --white: #ffffff; }
+        body { font-family: 'Montserrat', sans-serif; background: var(--bg); margin: 0; color: #2c2c2c; scroll-behavior: smooth; }
+        
+        /* HEADER */
+        .hero { background: linear-gradient(160deg, var(--bordeaux) 0%, #4a0310 100%); color: white; padding: 70px 20px; text-align: center; border-bottom: 5px solid var(--gold); }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 2.8rem; margin: 10px 0; }
+        .subtitle { color: var(--gold); text-transform: uppercase; letter-spacing: 3px; font-weight: bold; font-size: 0.8rem; }
+        
+        /* CONTENU */
+        .container { max-width: 600px; margin: -50px auto 50px; padding: 0 20px; }
+        .card { background: var(--white); padding: 30px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); margin-bottom: 25px; border-top: 4px solid var(--gold); }
+        
+        .rules-box { border-left: 4px solid var(--bordeaux); padding-left: 20px; font-size: 0.95rem; line-height: 1.8; }
+        .rules-box b { color: var(--bordeaux); text-transform: uppercase; font-size: 0.8rem; }
+
+        /* FORMULAIRE */
+        h2 { color: var(--bordeaux); font-family: 'Playfair Display', serif; text-align: center; margin-bottom: 25px; }
+        .form-group { margin-bottom: 18px; }
+        label { display: block; margin-bottom: 8px; font-weight: bold; font-size: 0.85rem; color: #555; }
+        .form-control { width: 100%; padding: 14px; border: 2px solid #eee; border-radius: 12px; font-family: inherit; box-sizing: border-box; transition: 0.3s; font-size: 1rem; }
+        .form-control:focus { border-color: var(--bordeaux); outline: none; background: #fff; }
+        
+        .checkbox-group { display: flex; align-items: center; gap: 10px; margin-top: 8px; font-size: 0.85rem; color: #777; cursor: pointer; }
+        
+        .btn { width: 100%; background: var(--bordeaux); color: white; padding: 18px; border: none; border-radius: 12px; font-weight: bold; cursor: pointer; font-size: 1.1rem; box-shadow: 0 5px 15px rgba(109,7,26,0.3); transition: 0.3s; }
+        .btn:hover { background: #4a0310; transform: translateY(-2px); }
+
+        /* MESSAGE DE SUCCÈS (Caché par défaut) */
+        #result { display: none; text-align: center; padding: 20px; background: #d4edda; color: #155724; border-radius: 12px; margin-top: 20px; font-weight: bold; }
+
+        .footer { text-align: center; font-size: 0.75rem; color: #aaa; padding: 20px; text-transform: uppercase; letter-spacing: 1px; }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <div class="subtitle">Formulaire de suivi</div>
+    <h1>Disciple 2026</h1>
+    <p style="font-style: italic; opacity: 0.8; font-family: 'Playfair Display', serif;">Thème du mois de Février: «La fidélité infaillible de Dieu.»</p>
+</div>
+
+<div class="container">
+    <div class="card">
+        <div class="rules-box">
+            <b>Le Programme du mois</b><br>
+            ☀️ Prière matinale chaque jour à partir de 5h30<br>
+            🔥 Jours de jeûne toute la semmaine en cas d'indisponibilité jour obligatoires de jeunes : <span style="color:var(--bordeaux); font-weight:bold;">Mercredi & Vendredi</span><br>
+            🌍 Objectif du jeûne: Formés pour témoigner
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Mon formulaire 🙏</h2>
+        
+        <form id="form">
+            <input type="hidden" name="access_key" value="40008284-53ab-4aea-ab6c-84769b2a4a44">
+            
+            <div class="form-group">
+                <label>Nom & Prénom</label>
+                <input type="text" name="nom" class="form-control" placeholder="Ton nom complet" required>
+            </div>
+
+            <div class="form-group">
+                <label>Commission (si tu en as une)</label>
+                <input type="text" name="commission" class="form-control" placeholder="Ex: Groupe Musical, MultiMédia, Intercession...">
+            </div>
+
+            <div class="form-group" style="border-top: 1px solid #eee; padding-top: 15px;">
+                <label>Ton Témoignage</label>
+                <textarea name="temoignage" class="form-control" style="min-height: 100px;" placeholder="Ce que le Seigneur a fait..."></textarea>
+                <label class="checkbox-group">
+                    <input type="checkbox" name="anonyme_temoignage"> Rendre le témoignage anonyme
+                </label>
+            </div>
+
+            <div class="form-group" style="border-top: 1px solid #eee; padding-top: 15px;">
+                <label>Sujet de Prière (Confidentiel)</label>
+                <textarea name="sujet_priere" class="form-control" style="min-height: 80px;" placeholder="Tes besoins pour lesquels nous prierons..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Contact (Numéro ou Email)</label>
+                <input type="text" name="contact" class="form-control" placeholder="Pour un suivi particulier">
+            </div>
+
+            <button type="submit" class="btn">Valider le formulaire 🔥</button>
+        </form>
+
+        <div id="result"></div>
+    </div>
+
+    <div class="footer">
+        MÁRTUS 2026 •
+    </div>
+</div>
+
+<script>
+const form = document.getElementById('form');
+const result = document.getElementById('result');
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formData = new FormData(form);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+    result.innerHTML = "Envoi en cours...";
+    result.style.display = "block";
+
+    fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: json
+        })
+        .then(async (response) => {
+            let json = await response.json();
+            if (response.status == 200) {
+                result.innerHTML = "Engagement reçu ! ✨<br>Bon mois de jeûne, que Dieu te fortifie !";
+                result.style.background = "#6d071a";
+                result.style.color = "white";
+                form.reset();
+                form.style.display = "none"; // Cache le formulaire après réussite
+            } else {
+                console.log(response);
+                result.innerHTML = json.message;
+            }
+        })
+        .catch(error => {
+            console.log(error);
+            result.innerHTML = "Oups ! Quelque chose a mal fonctionné.";
+        });
+});
+</script>
+
+</body>
+</html>
